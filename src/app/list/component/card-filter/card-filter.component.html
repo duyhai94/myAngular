@@ -1,0 +1,8 @@
+<div class="card" [class]="ListData.cssClass">
+    <div class="card-item" *ngFor="let i of ListData.data">
+        {{i.label}}
+        <div *ngIf="i.type ==='string'">
+            <input (input)="onChangeValue()" type="text" [(ngModel)]="i.value" name="i.name">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<table [class]="Table.cssClass">
+    <tr>
+        <th *ngFor="let i of Table.Data" [class]="i.cssTh">
+            {{i.text}}
+        </th>
+    </tr>
+    <tr *ngFor="let i of dataApi">
+        <td *ngFor="let item of Table.Data" [class]="item.cssTD">
+            {{i[item.condition]}}
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,13 @@
+<p>profile-word works!</p>
+
+
+<button [routerLink]="['word-create']">
+          create word
+</button>
+
+<button [routerLink]="['word-detail']">
+          detail-word
+</button>
+<button (click)="openDialog()">Edit</button>
+
+<router-outlet></router-outlet>
