@@ -17,8 +17,13 @@ export const appRoutes: Routes = [
           import('./list/list.module').then((m) => m.ListModule)
       },
       {
+        path: 'forms',
+        loadChildren: () =>
+          import('./forms/forms.module').then( m => m.FormModules)
+      },
+      {
         path: '',
-        redirectTo: 'list',
+        redirectTo: 'forms',
         pathMatch: 'full',
       },
     ],

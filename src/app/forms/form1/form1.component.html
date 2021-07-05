@@ -1,0 +1,33 @@
+<div>
+    <h1>doc:</h1> <a href="https://angular.io/guide/form-validation">https://angular.io/guide/form-validation</a></div>
+<div class="form">
+    <form (ngSubmit)="onSubmit()" [formGroup]="myGroup">
+
+
+        <label for="p1">Old Password *</label>
+        <input type="text" minlength="8" maxlength="32" name="p1" formControlName="p1" (blur)="callAPIcheckPW()">
+        <span *ngIf="isInvalidCheckOldPW('p1')">Wrong password</span>
+
+
+        <label for="p2">New Password *</label>
+        <input type="text" minlength="8" maxlength="32" name="p2" formControlName="p2">
+        <span *ngIf="isInvalidControl('p2')">Wrong password</span>
+
+
+
+        <label for="p3">ComFirm Password *</label>
+        <input type="text" minlength="8" maxlength="32" name="p3" formControlName="p3">
+        <span *ngIf="isInvalidControl('p3')">Wrong password</span>
+
+
+        <button type="submit">Submit</button>
+
+        <div class="data">
+            {{data | json}}
+        </div>
+
+        <div>
+            {{toastOldPW}}
+        </div>
+    </form>
+</div>

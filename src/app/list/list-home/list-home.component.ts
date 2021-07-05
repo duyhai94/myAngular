@@ -149,6 +149,7 @@ export class ListHomeComponent implements OnInit {
     if (!optionFilter.length) return (this.dataApiSub = this.dataApi);
     optionFilter.forEach((x, ix) => {
       if (ix === 0) {
+        
         this.dataApiSub = this.dataApi.filter((a) => a[x.id] === x.value);
       } else {
         this.dataApiSub = this.dataApiSub.filter((a) => a[x.id] === x.value);
