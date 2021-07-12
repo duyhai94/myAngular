@@ -1,0 +1,28 @@
+.form2 {
+    width: 425px;
+    margin: auto;
+    padding: 50px 16px;
+    border-radius: 16px;
+    border: 1px solid rebeccapurple;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    input {
+        height: 42px;
+        padding: 0px 16px;
+    }
+    label {
+        padding: 10px 0px;
+    }
+    button {
+        height: 24px;
+        margin-top: 16px;
+    }
+}
+
+.err {
+    color: red;
+}

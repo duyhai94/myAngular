@@ -1,5 +1,6 @@
 import { Routes } from "@angular/router";
 import { Form1Component } from "./form1/form1.component";
+import { Form2Component } from "./form2/form2.component";
 
 export const formsRoutes: Routes = [
    {
@@ -8,8 +9,12 @@ export const formsRoutes: Routes = [
             
    },
    {
+      path: 'form2',
+      component: Form2Component
+   },
+   {
       path: '',
-      redirectTo: 'form1',
+      redirectTo: 'form2',
       pathMatch: 'full'
    }
 ]
