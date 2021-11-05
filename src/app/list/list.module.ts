@@ -7,6 +7,7 @@ import { ListHomeComponent } from "./list-home/list-home.component";
 import { listRoutes } from "./list.routes";
 import {  CardFilterModule } from './component/card-filter/card-filter.component';
 import {  BaseTableModule } from './component/base-table/base-table.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
           declarations: [ListHomeComponent, ListDetailComponent,],
@@ -15,7 +16,9 @@ import {  BaseTableModule } from './component/base-table/base-table.component';
                     FormsModule,
                     RouterModule.forChild(listRoutes),
                     CardFilterModule,
-                    BaseTableModule],
+                    BaseTableModule,
+                    HttpClientModule
+                  ],
           
           exports:[]
 })

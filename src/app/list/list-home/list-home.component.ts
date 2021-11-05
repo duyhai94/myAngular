@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -138,10 +139,14 @@ export class ListHomeComponent implements OnInit {
   ];
 
   dataApiSub = [];
-  constructor() {}
+  constructor(
+    private http : HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.dataApiSub = this.dataApi;
+
+    
   }
 
   onChangeValueFilter = () => {

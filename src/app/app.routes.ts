@@ -22,8 +22,13 @@ export const appRoutes: Routes = [
           import('./forms/forms.module').then( m => m.FormModules)
       },
       {
+        path: 'forms-capcha',
+        loadChildren: () => 
+          import('./forms-capcha/forms-capcha.module').then(m => m.FormsCapchaModlue)
+      },
+      {
         path: '',
-        redirectTo: 'forms',
+        redirectTo: 'forms-capcha',
         pathMatch: 'full',
       },
     ],
